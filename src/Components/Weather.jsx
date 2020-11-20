@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Api_Key = "2f1018e9254bed448ab88be0fc8fe02a";
+const Api_Key = process.env.REACT_APP_API_KEY
 
 export default function Weather() {
   const [city, setCity] = useState("Erie");
@@ -21,9 +21,8 @@ export default function Weather() {
       .then((res) => {
         setData({
           isFetching: false,
-          data: res,
+          data: res.data,
         });
-        console.log(res.data);
       });
   }, []);
   return (
