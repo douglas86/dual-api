@@ -1,0 +1,34 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+const Api_Key = "2f1018e9254bed448ab88be0fc8fe02a";
+
+export default function Weather() {
+  const [city, setCity] = useState("Erie");
+  const [data, setData] = useState({
+    isFetching: false,
+    data: null,
+  });
+
+  useEffect(() => {
+    setData({
+      isFetching: true,
+    });
+    axios
+      .get(
+        `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${Api_Key}&units=metric`
+      )
+      .then((res) => {
+        setData({
+          isFetching: false,
+          data: res,
+        });
+        console.log(res.data);
+      });
+  }, []);
+  return (
+    <div className="Weather">
+      <h1>This is a new file</h1>
+    </div>
+  );
+}
