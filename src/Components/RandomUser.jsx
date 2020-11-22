@@ -7,7 +7,7 @@ export default function Randomuser() {
 
   useEffect(() => {
     axios
-      .get("https://randomuser.me/api/?page=1&results=10&nat=us")
+      .get("https://randomuser.me/api/?page=1&results=1&nat=us")
       .then((response) => {
         setUsers(response.data.results);
       });
