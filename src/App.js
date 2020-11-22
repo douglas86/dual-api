@@ -5,7 +5,6 @@ import Weather from "./Components/Weather";
 const App = () => {
   return (
     <div>
-      <Weather />
       <RandomUser />
     </div>
   );
