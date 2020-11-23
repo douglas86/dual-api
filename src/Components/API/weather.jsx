@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
+import Users from "./users";
 import axios from "axios";
 
-const Api_Key = process.env.REACT_APP_API_KEY
+const Api_Key = process.env.REACT_APP_API_KEY;
 
 export default function Weather() {
-  const [city, setCity] = useState("Erie");
+  const [users] = Users();
+  const city = "London";
   const [data, setData] = useState({
-    isFetching: false,
+    isLoading: false,
     data: null,
   });
 
   useEffect(() => {
     setData({
-      isFetching: true,
+      isLoading: true,
     });
     axios
       .get(
@@ -20,9 +22,10 @@ export default function Weather() {
       )
       .then((res) => {
         setData({
-          isFetching: false,
-          data: res.data,
+          isLoading: false,
+          data: res.data.results,
         });
+        console.log(`res ${res}`);
       });
   }, []);
   return (
