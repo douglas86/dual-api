@@ -6,7 +6,7 @@ const Users = () => {
 
   useEffect(() => {
     axios
-      .get(`https://randomuser.me/api/?page=1&results=5&nat=us`)
+      .get(`https://randomuser.me/api/?page=1&results=1&nat=us`)
       .then((res) => {
         setUsers(res.data.results);
       });
