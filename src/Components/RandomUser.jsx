@@ -1,11 +1,9 @@
 import React from "react";
 import Users from "./API/Users";
-import Weather from "./API/Weather";
 
 export default function Randomuser() {
   // array from users api
   const [users] = Users();
-  let city = [];
 
   // if (users.length > 0) {
   //   users.map((item) => {

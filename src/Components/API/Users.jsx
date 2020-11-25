@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios"
+import axios from "axios";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`https://randomuser.me/api/?page=1&results=1&nat=us`)
+      .get(`https://randomuser.me/api/?page=1&results=5&nat=us`)
       .then((res) => {
         setUsers(res.data.results);
       });
