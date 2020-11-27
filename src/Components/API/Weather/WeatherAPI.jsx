@@ -12,10 +12,8 @@ const WeatherAPI = (cityArray) => {
     data: [],
   });
 
-  console.log(cityArray);
-
   useEffect(() => {
-    cityArray.forEach((item) => {
+    city.forEach((item) => {
       axios
         .get(
           `http://api.openweathermap.org/data/2.5/forecast?q=${item}&appid=${Api_Key}&units=metric`

@@ -4,7 +4,7 @@ import Users from "../Users";
 
 export default function Weather() {
   const [users] = Users();
-  let cityArray = [];
+  let cityArray = ["Cape Town", "London"];
 
   users.forEach((user) => {
     cityArray.push(user.location.city);
@@ -12,7 +12,9 @@ export default function Weather() {
 
   const [weather] = WeatherAPI(cityArray);
 
-  console.log(weather);
+  users.forEach((user) => {
+    console.log(user);
+  });
 
   return (
     <div>
