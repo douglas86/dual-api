@@ -11,22 +11,6 @@ This component will control all the data for the city
 ### WeatherAPI component
 this will control the API and send the city to the api
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

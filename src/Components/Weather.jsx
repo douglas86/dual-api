@@ -1,10 +1,9 @@
 import React from "react";
-import WeatherAPI from "./WeatherAPI";
 
 const Weather = () => {
   return (
     <div>
-      <WeatherAPI />
+      <h1>Hello</h1>
     </div>
   );
 };
