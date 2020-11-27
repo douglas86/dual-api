@@ -2,7 +2,9 @@ import React from "react";
 import WeatherAPI from "./API/WeatherAPI";
 
 const Weather = () => {
-  const [data] = WeatherAPI();
+  const [datas] = WeatherAPI();
+
+  console.log(datas);
 
   return (
     <div>

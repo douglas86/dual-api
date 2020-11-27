@@ -1,15 +1,10 @@
 # Plan of action
+Gotten it right to print the data based on the city name
+this data comes from a hard coded array of cities
 
-## Notes
-Create a new Directory called Weather
-
-### `Create a few new components`
-
-### Weather component
-This component will control all the data for the city
-
-### WeatherAPI component
-this will control the API and send the city to the api
+## What's next?
+Print the data to the screen using a map
+place the map in the Weather.jsx component
 
 # Getting Started with Create React App
 

@@ -7,8 +7,6 @@ const WeatherAPI = () => {
   const [data, setData] = useState([]);
   let city = ["Cape Town", "London"];
 
-  console.log(data);
-
   useEffect(() => {
     city.forEach((item) => {
       axios
@@ -16,7 +14,7 @@ const WeatherAPI = () => {
           `http://api.openweathermap.org/data/2.5/forecast?q=${item}&appid=${Api_Key}&units=metric`
         )
         .then((res) => {
-          setData(...data, res);
+          setData(res.data);
         });
     });
   }, []);
