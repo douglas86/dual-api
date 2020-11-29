@@ -1,10 +1,10 @@
 # Plan of action
-Gotten it right to print the data based on the city name
-this data comes from a hard coded array of cities
+Gotten it right to store all data concerning an array of cities
+that appends to a state array
 
 ## What's next?
-Print the data to the screen using a map
-place the map in the Weather.jsx component
+Store array of cities from the users that are generated from
+the random users api
 
 # Getting Started with Create React App
 
