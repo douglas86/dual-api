@@ -4,6 +4,17 @@ import Users from "./API/Users";
 export default function Randomuser() {
   // array from users api
   const [users] = Users();
+  // stores all cities names from users api
+  let city = [];
+
+  // pushes cities name to city array
+  if (users.length != 0) {
+    users.forEach((item) => {
+      city.push(item.location.city);
+    });
+  }
+
+  console.log(city);
 
   return (
     <div className="Randomuser">

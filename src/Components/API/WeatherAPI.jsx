@@ -6,7 +6,6 @@ const Api_Key = process.env.REACT_APP_API_KEY;
 
 const WeatherAPI = () => {
   const [data, setData] = useState([]);
-  const [users] = Users();
   let city = ["Cape Town", "London", "Paris"];
 
   useEffect(() => {

@@ -4,8 +4,6 @@ import WeatherAPI from "./API/WeatherAPI";
 const Weather = () => {
   const [data] = WeatherAPI();
 
-  console.log(data);
-
   return (
     <div>
       <h1>Hello</h1>
