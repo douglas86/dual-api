@@ -1,5 +1,6 @@
 import React from "react";
-import RandomUser from "./Components/Test/RandomUser";
+import RandomUser from "./Components/RandomUser";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return <RandomUser />;
