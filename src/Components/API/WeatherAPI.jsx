@@ -15,18 +15,21 @@ const WeatherAPI = (props) => {
         )
         .then((res) => {
           setData((prev) => [...prev, res.data]);
-          console.log(res.data);
         });
     }
   }, []);
 
   return (
     <div>
+      <h4>Weather Conditions</h4>
       {data.map((c, index) => (
         <div key={index}>
-          <p>Min temp: {c["list"][0]["main"]["temp_min"]}</p>
-          <p>Max temp: {c["list"][0]["main"]["temp_max"]}</p>
-          <img src={c["list"][0]["weather"][0]["icon"]} alt="" />
+          <p>Min temp: {c["list"][0]["main"]["temp_min"]}{'\u00b0'}C</p>
+          <p>Max temp: {c["list"][0]["main"]["temp_max"]}{'\u00b0'}C</p>
+          <img
+            src={`http://openweathermap.org/img/wn/${c["list"][0]["weather"][0]["icon"]}.png`}
+            alt="Nothing"
+          />
         </div>
       ))}
     </div>

@@ -6,21 +6,25 @@ import { Container, Row, Col } from "react-bootstrap";
 const RandomUser = () => {
   const [users] = Users();
   return (
-    <div className="Randomuser">
+    <div style={{ backgroundColor: "#6ddced" }} className="Randomuser">
       <Container>
         <h1>This is a random user</h1>
         {users.map((user) => (
           <div key={user.login.uuid}>
             <Row>
               <Col>
-                <h3>
+                <h1 style={{ textAlign: "center" }}>
                   {user.name.first} {user.name.last}
-                </h3>
+                </h1>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
                 <img src={user.picture.large} alt="" />
                 <p>Gender: {user.gender}</p>
-                <p>City: {user.location.city}</p>
               </Col>
               <Col>
+                <p>City: {user.location.city}</p>
                 <Weather props={user} />
               </Col>
             </Row>
