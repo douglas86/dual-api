@@ -8,7 +8,15 @@ const RandomUser = () => {
   return (
     <div style={{ backgroundColor: "#6ddced" }} className="Randomuser">
       <Container>
-        <h1>This is a random user</h1>
+        <h1
+          style={{
+            textAlign: "center",
+            color: "red",
+            marginBottom: "20px",
+          }}
+        >
+          Information on Random Users
+        </h1>
         {users.map((user) => (
           <div key={user.login.uuid}>
             <Row>
