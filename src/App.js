@@ -1,13 +1,8 @@
 import React from "react";
-import RandomUser from "./Components/RandomUser";
-// import Weather from "./Components/Weather";
+import RandomUser from "./Components/Test/RandomUser";
 
 const App = () => {
-  return (
-    <div>
-      <RandomUser />
-    </div>
-  );
+  return <RandomUser />;
 };
 
 export default App;
